@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:wght@400;500&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 90 / 96 / 128
+
+
+FONT SIZE SYSTEM
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+:root {
+  /*Primary Color*/
+  --primary-color: #189ab4; /*#30b4ad*/
+
+  /*Background*/
+  --white-color: #ffffff;
+
+  /*Accent Gray*/
+  --heading-text: #000;
+
+  /*Text and Secondary Elements*/
+  --text-color: #333;
+
+  /*Divider Lines*/
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  width: 100%;
+}
+
+.header-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: transparent;
+}
+
+.logo {
+  color: #ffffff;
+}
+/* NAVIGATION MENU */
+.nav-item .nav-link {
+  display: block;
+  line-height: 36px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: 0.15s;
+}
+
+.nav-item .nav-link:hover {
+  color: #3dbdd6;
+}
+
+/* TO BE DECLARED IN JS */
+.navbar-scroll {
+  background-color: #ffffff;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-scroll .nav-item .nav-link {
+  color: black;
+}
+
+.navbar-scroll .nav-item .nav-link:hover {
+  color: #189ab4;
+}
+.navbar-scroll .logo {
+  color: #000;
+  font-weight: 500;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
+
+.hero-title {
+  text-transform: capitalize;
+}
+
+.hero-section {
+  color: #ffffff;
+  background-image: url(./img/maramo-river-bg.png);
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  padding-top: 125px;
+}
+
+.hero-section:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 49, 49, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* TO BE FIXED - LINE-HEIGHT - LINE-SPACING*/
+.hero-section .hero-title {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  margin: 0px 0px 12px;
+}
+
+/* TO BE FIXED - LINE-HEIGHT - LINE-SPACING*/
+.hero-section .hero-description {
+  font-size: 16px;
+  /*line-height: 150%;*/
+  line-height: 28px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.hero-btn {
+  padding: 0 34px;
+  z-index: 1;
+  margin: 30px auto 25px;
+  line-height: 52px;
+  position: relative;
+  height: 52px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
+}
+
+.hero-btn:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+/*================= MAIN CONTENT ================= 
+/* TOP DESTINATIONS */
+.wrapper {
+  /*max-width: 1200px;*/
+  margin: 16px 30px;
+  padding: 0 23px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 46px;
+  background: var(--primary-color);
+  color: #ffffff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.wrapper i:first-child {
+  left: 0;
+  display: none;
+}
+
+.wrapper i:last-child {
+  right: 0;
+}
+
+.wrapper i:hover {
+  background-color: #55d6f0;
+}
+
+.wrapper i:active {
+  background-color: #333;
+}
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.h1-top-destinations {
+  padding-top: 48px;
+  margin-left: 50px;
+}
+
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  margin-left: 12px;
+  width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+  margin-left: 0px;
+}
+
+/* Rivers Section */
+
+.rivers {
+  background-color: #181818;
+  margin-top: 48px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+}
+
+.h1-rivers {
+  padding-top: 48px;
+  margin-left: 50px;
+  padding-bottom: 48px;
+  color: #fff;
+}
+
+.card {
+  width: 350px;
+  height: 360px;
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 1rem;
+  position: relative;
+  transition: 0.5s all ease-in-out;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+  z-index: 2;
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.card:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card .river-info {
+  position: relative;
+  color: #fff;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+
+.card:hover .river-info {
+  opacity: 1;
+  transform: translateY(2);
+}
+
+.card .river-info h1 {
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.card .river-info p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.card .river-info .river-btn {
+  background: #fff;
+  padding: 0.5rem 1rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+.card .river-info .river-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*=========================== MEDIA ===========================*/
+/*---------- NAVIGATION ----------*/
+
+@media only screen and (min-width: 1200px) {
+  .nav-item > .nav-link {
+    padding: 6px 20px !important;
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header-inner {
+    background-color: white !important;
+  }
+  .nav-item > .nav-link {
+    color: black !important;
+  }
+  .logo {
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+  .hero-section .hero-title {
+    font-size: 30px !important;
+  }
+}
+
+/*---------- TOP DESTINATIONS ----------*/
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+}
