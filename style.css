@@ -98,7 +98,7 @@ body {
   text-transform: capitalize;
 }
 
-.hero-section {
+#hero-section {
   color: #ffffff;
   background-image: url(./img/maramo-river-bg.png);
   min-height: 100vh;
@@ -109,7 +109,7 @@ body {
   padding-top: 125px;
 }
 
-.hero-section:before {
+#hero-section:before {
   position: absolute;
   content: "";
   width: 100%;
@@ -121,7 +121,7 @@ body {
 }
 
 /* TO BE FIXED - LINE-HEIGHT - LINE-SPACING*/
-.hero-section .hero-title {
+#hero-section .hero-title {
   font-family: "Playfair Display", sans-serif;
   font-size: 62px;
   font-weight: 500;
@@ -132,7 +132,7 @@ body {
 }
 
 /* TO BE FIXED - LINE-HEIGHT - LINE-SPACING*/
-.hero-section .hero-description {
+#hero-section .hero-description {
   font-size: 16px;
   /*line-height: 150%;*/
   line-height: 28px;
@@ -171,6 +171,7 @@ body {
 
 /*================= MAIN CONTENT ================= 
 /* TOP DESTINATIONS */
+
 .wrapper {
   /*max-width: 1200px;*/
   margin: 16px 30px;
@@ -229,7 +230,7 @@ body {
 }
 
 .h1-top-destinations {
-  padding-top: 48px;
+  padding-top: 70px;
   margin-left: 50px;
 }
 
@@ -247,12 +248,12 @@ body {
 /* Rivers Section */
 
 .rivers {
-  background-color: #181818;
   margin-top: 48px;
 }
 
 .image-container {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
@@ -260,10 +261,9 @@ body {
 }
 
 .h1-rivers {
-  padding-top: 48px;
   margin-left: 50px;
   padding-bottom: 48px;
-  color: #fff;
+  color: #000;
 }
 
 .card {
@@ -310,7 +310,7 @@ body {
   left: 0;
 }
 
-.card .river-info {
+.card .info {
   position: relative;
   color: #fff;
   z-index: 3;
@@ -319,23 +319,27 @@ body {
   transition: 0.5s all;
 }
 
-.card:hover .river-info {
+.card:hover .info {
   opacity: 1;
   transform: translateY(2);
 }
 
-.card .river-info h1 {
+.card .info h1 {
   line-height: 40px;
   margin-bottom: 10px;
 }
 
-.card .river-info p {
+.card .info p {
   font-size: 15px;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.card .river-info .river-btn {
+.card .info .photo-credits {
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+.card .info .info-btn {
   background: #fff;
   padding: 0.5rem 1rem;
   color: var(--primary-color);
@@ -346,10 +350,124 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-.card .river-info .river-btn:hover {
+.card .info .info-btn:hover {
   background: var(--primary-color);
   color: #fff;
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* CUISINE */
+.cuisine,
+.landmarks,
+.viewdeck {
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin-top: 48px;
+}
+.h1-cuisine,
+.h1-landmarks,
+.h1-viewdeck {
+  margin-left: 48px;
+  padding-bottom: 48px;
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* SECTION: ABOUT*/
+#about {
+  /*width: 100%;
+  min-height: 100vh;*/
+  display: grid;
+  place-items: center;
+}
+
+.row {
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  overflow-x: hidden;
+  padding: 5rem 0;
+}
+
+.row .imgWrapper {
+  overflow: hidden;
+}
+
+.row .imgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.row .imgWrapper:hover img {
+  /* To transform the image when hover */
+  transform: scale(1.25);
+}
+
+.row .contentWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.row .contentWrapper h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #383f47;
+  padding-bottom: 20px;
+}
+
+.row .imgWrapper .about-credits {
+  display: flex;
+  padding-top: 16px;
+  position: absolute;
+  font-size: 12px;
+}
+
+.row .contentWrapper a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 15px 40px;
+  letter-spacing: 1px;
+  user-select: none;
+  margin-top: 18px;
+}
+
+.row .contentWrapper a:hover {
+  text-decoration: none;
+  background-color: #147e93;
+  color: #ffffff;
+}
+
+/* SECTION: FOOTER*/
+.my-footer {
+  margin-top: 64px;
+  background-color: #183153;
+}
+
+.row .contentWrapper p {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /*=========================== MEDIA ===========================*/
@@ -359,6 +477,11 @@ body {
   .nav-item > .nav-link {
     padding: 6px 20px !important;
     display: block !important;
+  }
+
+  .hero-section,
+  .hero-title {
+    font-size: calc(7px + 0.5vw);
   }
 }
 
@@ -373,12 +496,18 @@ body {
     color: #000 !important;
     font-weight: 600 !important;
   }
+
+  .logo:hover {
+    color: var(--primary-color) !important;
+  }
+
   .hero-section .hero-title {
     font-size: 30px !important;
   }
 }
 
 /*---------- TOP DESTINATIONS ----------*/
+
 @media screen and (max-width: 900px) {
   .carousel img {
     width: calc(100% / 2);
@@ -388,5 +517,64 @@ body {
 @media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
+  }
+
+  .card {
+    margin-left: 0;
+  }
+}
+
+/*---------- SECTION: ABOUT ----------*/
+@media (max-width: 991px) {
+  .row {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+
+  .row .contentWrapper {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    width: 90%;
+  }
+
+  .row .contentWrapper h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+
+  .row .contentWrapper p {
+    line-height: 24px;
+  }
+
+  .row .contentWrapper a {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .row .contentWrapper h2 {
+    font-size: 25px;
+  }
+
+  .row .contentWrapper p,
+  #hero-section .hero-description {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  #hero-section .hero-title {
+    font-size: 40px;
+  }
+
+  .row .imgWrapper img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.3s;
   }
 }

@@ -27,7 +27,7 @@
   <body>
 <!-- Header -->
     <header class="header">
-      <div class="header-inner"> <!-- what is this? -->
+      <div class="header-inner"> 
         <div class="container-fluid px-lg-5">
          
           <nav class="navbar navbar-expand-lg my-navbar">
@@ -48,10 +48,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item px-3">
-                <a class="nav-link" aria-current="page" href="#home">Home</a>
+                <a class="nav-link" aria-current="page" href="#hero-section">Home</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#destinations">Destinations</a>
+                <a class="nav-link" href="#top-destinations">Destinations</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="#about">About</a>
@@ -64,9 +64,9 @@
 
 
   <!--HERO SECTION-->
-    <section class="hero-section">
+    <section id="hero-section">
       <div class="container"> <!--Container, row, col-12 col-lg-6-->
-        <div class="row d-flex justify-content-center align-items-center">
+        <div class="hero-row d-flex justify-content-center align-items-center">
           <div class="col-md-12">
             <div class="hero-content text-center">
               <h1 class="hero-title">Discover Norzagaray</h1>
@@ -76,7 +76,7 @@
                 escape. With its meandering rivers, mysterious cave, and world-class
                 resorts, Norzagaray offers an unforgettable journey into the beauty of
                 nature and relaxation.</p>
-              <a href="#destionations" class="hero-btn">Explore</a>
+              <a href="#top-destinations" class="hero-btn">Explore</a>
             </div>
           </div>
         </div>
@@ -84,38 +84,22 @@
     </section>
 
      
-    
 
 <!-- MAIN CONTENT -->
-<div class="main-content">
-  <section class="top-destinations">
+  <section id="top-destinations">
     <h1 class="h1-top-destinations">Top Destinations</h1>
-     <div class="wrapper">
+    <div class="wrapper">
       <i id="left" class="fa-solid fa-angle-left"></i>
-            <div class="carousel">  
-
-              <img src="../GoGaray-website/img/THE-SECRET-HAVEN.jpg" alt="THE-SECRET-HAVEN-NORZAGARAY" draggable="false">
-              <img src="../GoGaray-website/img/Adventure-resort-bulacan.jpg" alt="Adventure-resort-NORZAGARAY" draggable="false">
-              <img src="../GoGaray-website/img/bitbit.PNG" alt="bitbit-NORZAGARAY" draggable="false">
-              <img src="../GoGaray-website/img/maramo-river-bg.png" alt="maramo-river-NORZAGARAY" draggable="false">
-              <img src="../GoGaray-website/img/BAKAS-RIVER.jpg" alt="BAKAS-RIVER-NORZAGARAY" draggable="false">
-              <img src="../GoGaray-website/img/LIONESS-ROCK-FORMATION.webp" alt="LIONESS-ROCK-FORMATION-NORZAGARAY" draggable="false">
-
-               <!-- FOR FIREPOX  -->
-         <!--<img src="/img/THE-SECRET-HAVEN.jpg" alt="THE-SECRET-HAVEN-NORZAGARAY" draggable="false">
-              <img src="/img/Adventure-resort-bulacan.jpg" alt="Adventure-resort-NORZAGARAY" draggable="false">
-              <img src="/img/bitbit.PNG" alt="bitbit-NORZAGARAY" draggable="false">
-              <img src="/img/maramo-river-bg.png" alt="maramo-river-NORZAGARAY" draggable="false">
-              <img src="/img/BAKAS-RIVER.jpg" alt="BAKAS-RIVER-NORZAGARAY" draggable="false">
-              <img src="/img/LIONESS-ROCK-FORMATION.webp" alt="LIONESS-ROCK-FORMATION-NORZAGARAY" draggable="false">
--->
-              <!-- ERROR: NOT SHOWING -->
-              <!--<img src="/img/Pinagrealan-Cave.jpg" alt="Pinagrealan-Cave-NORZAGARAY">
-              <img src="/img/PUNDUHAN-NG-MGA-DUMAGAT.jpg" alt="PUNDUHAN-NG-MGA-DUMAGAT-NORZAGARAY">  
-              <img src="/img/St.John-Mary-Vianney-Retreat-House-Bulacan.jpg" alt="John-Mary-Vianney-Retreat-House-NORZAGARAY">  -->          
-            </div> 
-            <i id="right" class="fa-solid fa-angle-right"></i>
-        </div>
+        <div class="carousel">  
+          <img src="../GoGaray-website/img/THE-SECRET-HAVEN.jpg" alt="THE-SECRET-HAVEN-NORZAGARAY" draggable="false">
+          <img src="../GoGaray-website/img/Adventure-resort-bulacan.jpg" alt="Adventure-resort-NORZAGARAY" draggable="false">
+          <img src="../GoGaray-website/img/bitbit.PNG" alt="bitbit-NORZAGARAY" draggable="false">
+          <img src="../GoGaray-website/img/maramo-river-bg.png" alt="maramo-river-NORZAGARAY" draggable="false">
+          <img src="../GoGaray-website/img/BAKAS-RIVER.jpg" alt="BAKAS-RIVER-NORZAGARAY" draggable="false">
+          <img src="../GoGaray-website/img/LIONESS-ROCK-FORMATION.webp" alt="LIONESS-ROCK-FORMATION-NORZAGARAY" draggable="false">   
+        </div> 
+        <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
   </section>
 
   <!-- RIVERS SECTION  -->
@@ -124,134 +108,215 @@
     <div class="image-container">
       <div class="card">
         <img src="../GoGaray-website/img/Bakas-River-image2.jpg" alt="This is an image of a river named Bakas in Norzagaray, Bulacan">
-        <div class="river-info">
+        <div class="info">
         <h1>Bakas River, Norzagaray</h1>
         <p>The river's name comes from Bernardo Carpio's massive footprint in the limestone, which means "trace" or "mark" in Filipino. </p>
-        <a href="https://www.traveloka.com/en-ph/explore/destination/exploring-norzagaray-bulacan-the-fascinating-tourist-spots-acc/256544" class="river-btn">Visit</a>
+        <p class="photo-credits">(Photo from Byahe ni Vin)</p>
+        <a href="https://www.traveloka.com/en-ph/explore/destination/exploring-norzagaray-bulacan-the-fascinating-tourist-spots-acc/256544" class="info-btn">Visit</a>
         </div>
       </div>
 
       <div class="card">
         <img src="../GoGaray-website/img/Maramo-River-Image2.jpg" alt="This is an image of a river named Maramo in Norzagaray, Bulacan">
-        <div class="river-info">
+        <div class="info">
         <h1>Maramo River, Norzagaray</h1>
         <p>New rising summer destinations – also known as Little Palawan of Bulacan</p>
-        <a href="https://www.facebook.com/profile.php?id=100056820196681" class="river-btn">Visit</a>
+        <p class="photo-credits">(Photo from Maramo River Official FB page)</p>
+        <a href="https://www.facebook.com/profile.php?id=100056820196681" class="info-btn">Visit</a>
         </div>
       </div>
 
       <div class="card">
         <img src="../GoGaray-website/img/Kanyakan-River.jpg"  alt="This is an image of a river named Kanyakan in Norzagaray, Bulacan">
-        <div class="river-info">
+        <div class="info">
           <h1>Kanyakan River, Norzagaray</h1>
           <p>One of the most visited summer destinations in Norzagaray yearly.  Located between Bakas and Balugan River.</p>
-          <a href="https://scontent.fcrk1-4.fna.fbcdn.net/v/t39.30808-6/272602174_3016914478548438_6795761320696351058_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f25831&_nc_eui2=AeFT6ooKKWqoEgF7afoamu9EA640zSrR8XMDrjTNKtHxc5hXgHd4dMsvwgbqTYQNs_VzqV86aQp3G0srKDOU9ryl&_nc_ohc=aJ27Uc9IHs8AX-d23zC&_nc_ht=scontent.fcrk1-4.fna&oh=00_AfBsZa0HBjnnp8L02cWZm-q_gQzLg5xFkOyezEy_KlGRTQ&oe=658C2F33" class="river-btn">Visit</a>
+          <p class="photo-credits">(Photo from Mica)</p>
+          <a href="https://scontent.fcrk1-4.fna.fbcdn.net/v/t39.30808-6/272602174_3016914478548438_6795761320696351058_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f25831&_nc_eui2=AeFT6ooKKWqoEgF7afoamu9EA640zSrR8XMDrjTNKtHxc5hXgHd4dMsvwgbqTYQNs_VzqV86aQp3G0srKDOU9ryl&_nc_ohc=aJ27Uc9IHs8AX-d23zC&_nc_ht=scontent.fcrk1-4.fna&oh=00_AfBsZa0HBjnnp8L02cWZm-q_gQzLg5xFkOyezEy_KlGRTQ&oe=658C2F33" class="info-btn">Visit</a>
         </div>
       </div>
 
       <div class="card">
         <img src="../GoGaray-website/img/Balugan-River.PNG" alt="This is an image of a river named Balugan in Norzagaray, Bulacan">
-        <div class="river-info">  
+        <div class="info">  
           <h1>Balugan River, Norzagaray</h1>
           <p>Visit the Balugan River if you want to cliff dive and experience crystalline water.</p>
-          <a href="https://www.facebook.com/TravelTayoPH/videos/229845609716840" class="river-btn">Visit</a>
+          <p class="photo-credits">(Photo from Travel Tayo PH)</p>
+          <a href="https://www.facebook.com/TravelTayoPH/videos/229845609716840" class="info-btn">Visit</a>
         </div>
       </div>
 
       <div class="card">
         <img src="../GoGaray-website/img/Bitbit-River-image2.jpg" alt="This is an image of a river named Bitbit in Norzagaray, Bulacan">
-        <div class="river-info">      
+        <div class="info">      
           <h1>Bitbit River Park, Norzagaray</h1>
           <p>Enjoy a hidden paradise with beautiful views of the mountains and refreshing river swims.</p>
-          <a href="https://www.facebook.com/pages/Bitbit-River-Norzagaray-Bulacan/379387885537025" class="river-btn">Visit</a>
+          <p class="photo-credits">(Photo from Tambay TRIP)</p>
+          <a href="https://www.facebook.com/pages/Bitbit-River-Norzagaray-Bulacan/379387885537025" class="info-btn">Visit</a>
         </div>
       </div>  
     </div>    
   </section>
 
-  <!--  <section>
-     <div class="container">
-            <h2>Camping</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
-  <section>
-     <div class="container">
-            <h2>Others</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
-  <section>
-     <div class="container">
-            <h2>Your journey starts here.</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
-  <section>
-     <div class="container">
-            <h2>Your journey starts here.</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
-  <section>
-     <div class="container">
-            <h2>Your journey starts here.</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
-  <section>
-     <div class="container">
-            <h2>Your journey starts here.</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
-  <section>
-     <div class="container">
-            <h2>Your journey starts here.</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
-  <section>
-     <div class="container">
-            <h2>Your journey starts here.</h2>
-            <p> This is it. You've made it so far. There is no going back.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iste molestias vel commodi, quae quaerat ex numquam. Consectetur corporis explicabo, qui labore, repellat dignissimos illo molestias maxime nisi a consequuntur?</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga autem dolore, ex nobis, iste quasi, asperiores esse repellendus tempore, obcaecati numquam minima maxime! Laboriosam, ut ipsam magnam corporis aut.</p>
-            <h3>Get lost and find yourself.</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat dolor molestias facere veritatis culpa amet fugiat debitis dolorem qui quidem consequuntur mollitia, nesciunt pariatur voluptatum! Dolor accusamus labore, sequi.</p>
-        </div>
-  </section>
 
-  </div>-->
+
+<!-- SECTION: CUISINE -->
+<section class="cuisine">
+  <h1 class="h1-cuisine">Cuisine</h1>
+  <div class="img-container">
+    <div class="card">
+      <img src="../GoGaray-website/img/JL-Jamies'Crispy-Pata.jpg" alt="This is an image of a local no.1 best crispy pata in Norzagaray.">
+      <div class="info">
+        <h1>JL Jamies' Crispy Pata</h1>
+        <p>Do not miss to taste this #1 Best Crispy Pata in Norzagaray</p>
+        <p class="photo-credits">(Photo from JL-Jamies' Crispy Pata and Restaurant Official FB page)</p>
+        <a href="https://www.facebook.com/JLJAMIES" class="info-btn" >Visit</a>
+      </div>
+    </div>
+  </div>
+</section>
+   
+
+
+<!-- SECTION: VIEWDECK -->
+<section class="viewdeck">
+  <h1 class="h1-viewdeck">View Deck</h1>
+  <div class="image-container">
+    <div class="card">
+      <img src="../GoGaray-website/img/IPO-DAM-VIEW-DECK.webp" alt="This is an image of Ipo Dam View Deck in Norzagaray.">
+      <div class="info">
+        <h1>Ipo Dam View Deck</h1>
+        <p>The view deck offers green scenery of the Sierra Madre and the Ipo Dam itself.</p>
+        <p class="photo-credits">(Photo from Jea Wanders)</p>
+        <a href="https://www.howshewanders.com/bulacan/ipo-view-deck-bitbit-river-norzagaray-bulacan/"class="info-btn">Visit</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../GoGaray-website/img/ANGAT-DAM-VIEW-DECK.jpg" alt="This is an image of Angat Dam View Deck in Norzagaray.">
+      <div class="info">
+        <h1>Angat Dam View Deck</h1>
+        <p>Angat Dam is open for everyone who loves nature trip.</p>
+        <p class="photo-credits">(Photo from Mommy Practicality)</p>
+        <a href="https://www.mommypracticality.com/2020/03/maynilad-water-treatment-facility.html"class="info-btn">Visit</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SECTION: HISTORICAL LANDMARKS AND CULTURE -->
+ <section class="landmarks">
+  <h1 class="h1-landmarks">Historical Landmarks and Culture</h1>
+  <div class="image-container">
+    <div class="card">
+      <img src="../GoGaray-website/img/PUNDUHAN-NG-MGA-DUMAGAT.jpg" alt="This image portrays the forestry and rock in Punduhan ng mga Dumagat.">
+      <div class="info">
+        <h1>Punduhan ng mga Dumagat, Norzagaray</h1>
+        <p>Punduhan ng mga Dumagat was named for the Dumagats, who live there naturally. </p>
+        <p class="photo-credits">(Photo from Arjay Eusebio)</p>
+        <a href="https://www.alltrails.com/en-gb/trail/philippines/bulacan/punduhan-ng-mga-dumagat-trail" class="info-btn">Visit</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../GoGaray-website/img/St.-Andrew-the-Apostle-Parish-Church.jpg" alt="This image portrays the St.Andrew the Apostle Parish Church in Norzagaray.">
+      <div class="info">
+        <h1>Parokya ng San Andres Apostol de Norzagaray</h1>
+        <p>The extraordinary history of this church is defined by five major occurrences.</p>
+        <p class="photo-credits">(Photo from Moments by Maestro)</p>
+        <a href="https://philippinefaithandheritagetours.com/parish-of-st-andrew-the-apostle-norzagaray/" class="info-btn">Visit</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../GoGaray-website/img/Pinagrealan-Cave-Image2.jpg" alt="This image portrays the Pinagrealan Cave in Norzagaray">
+      <div class="info">
+        <h1>Pinagrealan Cave, Norzagaray</h1>
+        <p>During the 1880s battle, the Katipuneros used the cave as a hideout.</p>
+        <p class="photo-credits">(Photo from Anna Varona)</p>
+       <a href="https://www.facebook.com/113662497046241/posts/pinagrealan-cavehideout-of-the-katipuneroslocated-at-norzagaray-bulacanthis-cave/134695341609623/" class="info-btn">Visit</a>
+     </div>
+    </div>
+  </div>
+ </section>
+
+
+
+<!-- SECTION: ABOUT -->
+<section id="about">
+    <div class="row"> <!-- ROW FOR ABOUT NORZAGARAY, BULACAN -->   
+      <div class="contentWrapper">
+        <div class="content">
+          <h2>About Norzagaray, Bulacan</h2>
+          <p style="font-weight: 500;">Did you know that the town of Norzagaray was originally named for a bird, but the name was later changed to Norzagaray?</p>
+  
+          <p>Norzagaray is abundant in historical significance. Prior to this, it was merely a barrio inside the municipality of Angat. The area was once referred to the barrio "Casay". Casay was a prevalent avian species in the area during that time.
+          </p>
+  
+          <a href="https://bulacan.gov.ph/cities-and-municipalities/norzagaray/#:~:text=Pre%2DSpanish%20records%20revealed%20that,to%20be%20separated%20from%20Angat.">Read More</a>
+        </div>
+      </div>
+  
+      <div class="imgWrapper">
+        <img src="../GoGaray-website/img/NORZAGARAY-MUNICIPALITY.jpg" alt="This is an image of the municipality of Norzagaray">
+       <span class="about-credits">Photo from (Travel and Wellness With Maria)</span>
+      </div>
+    </div>  <!-- END OF ROW FOR ABOUT NORZAGARAY, BULACAN --> 
+  
+
+  <!-- ROW FOR ABOUT ME -->
+  <div class="row"> 
+    <div class="imgWrapper">
+      <img src="../GoGaray-website/img/Alexa.jpg" alt="This is an image of Alexandria Lucas - the developer of the GoGaray website">
+      </div>
+    
+      <div class="contentWrapper">
+        <div class="content">
+          <h2>About Me</h2>
+          <p>My name is <span style="font-weight: bold;">Alexandria Lucas</span>, a third-year IT student from the Polytechnic University of the Philippines (Santa Maria, Bulacan Campus), and I built this website during the first semester of A.Y. 2023–2024 as my final project in the Web Development subject.</p>
+          
+        </div>
+      </div>
+  </div><!-- END OF ROW FOR ABOUT ME -->
+</section>
+  
  
+
+<!-- SECTION: FOOTER -->
+<footer class="my-footer text-center">
+
+  <!-- Grid container -->
+  <div class="container pt-4">
+
+    <!-- Section: Social Media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-white m-1" 
+     href="https://www.facebook.com/aila.vicente" role="button"  data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+
+      <!-- Instagram -->
+      <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-white m-1" 
+      href="https://www.instagram.com/alexskiii_vl/" role="button" ><i class="fab fa-instagram"></i></a>
+
+
+      <!-- Linkedin -->
+      <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-white m-1" href="https://www.linkedin.com/in/alexandria-lucas-2b522522b/" role="button" ><i class="fab fa-linkedin-in"></i></a>
+
+      <!-- Github -->
+      <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-white m-1" href="https://github.com/cache-hadoop30" role="button" ><i class="fab fa-github"></i></a>
+
+    </section> <!-- END Section: Social Media -->
+  </div> <!-- END Grid container -->
+
+  <!-- Copyright -->
+  <div class="class text-center text-white p-3">&copy; 2024 Copyright: Alexandria Lucas</div>
+
+</footer>
+
   
    <!-- Optional JavaScript -->
    <!-- JQuery -->
