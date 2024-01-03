@@ -30,7 +30,7 @@ let scrollWidth = carousel.scrollWidth - carousel.clientWidth; //getting max scr
 //function showHideIcons
 const showHideIcons = () => {
   //show and hide prev/next arrow icon according to carousel scroll left value
-  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+  arrowIcons[0].style.display = carousel.scrollLeft <= 0 ? "none" : "block";
   arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
 };
 
@@ -96,21 +96,16 @@ const dragStop = () => {
 
 // Add event listeners to handle mouse events
 carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", (e) => {
-  dragStart(e.touches[0]);
-});
-
 carousel.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", (e) => {
-  dragging(e.touches[0]);
-});
-
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop); // Add event listener for mouse leave to handle cases where the mouse leaves
 carousel.addEventListener("mouseup", dragStop);
-carousel.addEventListener("touchend", dragStop);
 
-//hide the arrow icon when reach the end
-carousel.addEventListener("scroll", () => {
-  showHideIcons();
+//Add event listeners to handle touch events
+carousel.addEventListener("touchstart", (e) => {
+  dragStart(e.touches[0]);
 });
+carousel.addEventListener("touchmove", (e) => {
+  dragging(e.touches[0]);
+});
+carousel.addEventListener("touchend", dragStop);
