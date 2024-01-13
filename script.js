@@ -31,15 +31,16 @@ let scrollWidth = carousel.scrollWidth - carousel.clientWidth; //getting max scr
 const showHideIcons = () => {
   //show and hide prev/next arrow icon according to carousel scroll left value
   arrowIcons[0].style.display = carousel.scrollLeft <= 0 ? "none" : "block";
-  arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+  arrowIcons[1].style.display = carousel.scrollLeft >= scrollWidth ? "none" : "block";
 };
 
-arrowIcons.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-    setTimeout(() => showHideIcons(), 60);
+showHideIcons(),
+  arrowIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+      setTimeout(() => showHideIcons(), 60);
+    });
   });
-});
 
 const autoSlide = () => {
   //If there is no image left to scroll then return from here
